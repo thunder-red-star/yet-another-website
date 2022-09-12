@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/opensauce/OpenSauceSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/opensauce/OpenSauceSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(../font/opensauce/OpenSauceSans-Italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url(../font/opensauce/OpenSauceSans-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/opensauce/OpenSauceSans-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/opensauce/OpenSauceSans-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../font/opensauce/OpenSauceSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../font/opensauce/OpenSauceSans-Black.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url(../font/opensauce/OpenSauceSans-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: italic;
+    font-weight: 300;
+    src: url(../font/opensauce/OpenSauceSans-LightItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: italic;
+    font-weight: 500;
+    src: url(../font/opensauce/OpenSauceSans-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: url(../font/opensauce/OpenSauceSans-SemiBoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: italic;
+    font-weight: 800;
+    src: url(../font/opensauce/OpenSauceSans-ExtraBoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sauce Sans';
+    font-style: italic;
+    font-weight: 900;
+    src: url(../font/opensauce/OpenSauceSans-BlackItalic.ttf) format('truetype');
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+    background-color: #28292c;
+}
+
+#root {
+    width: 70%;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.tabs-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #28292c;
+    border-bottom: 1px solid #3d3f43;
+}
+
+.tab-button {
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-top: 1px solid #3d3f43;
+    border-left: 1px solid #3d3f43;
+    border-right: 1px solid #3d3f43;
+}
+
+.about-hi {
+    font-size: max(6vw, 64px);
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.about-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.about-subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+.glow:hover {
+    background: linear-gradient(to right, #ff0000, #ffff00, #ff0000);
+    -webkit-background-clip: text !important;
+    transition: all 0.25s ease-in-out;
+    color: transparent;
+    width: calc(100% - 20px);
+    animation: glowing 15s linear infinite;
+    background-size: 400%
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400% 0;
+    }
+}
+
+.nav-item {
+    font-family: "Open Sauce Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    color: #aaa;
+}
+
+/* active tab */
+.nav-item.active {
+    color: #fff;
+}
+
+#navigation {
+    /* Navigation is vertically laid out */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Navigation is 100% of the height of the viewport */
+    margin: 0 auto;
+    width: 250px;
+}
+
+.home-content-text-bigtitle,
+.about-content-text-bigtitle,
+.dev-content-text-bigtitle,
+.projects-content-text-bigtitle,
+.contact-content-text-bigtitle {
+    font-size: max(4vw, 48px);
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sauce Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.home-content-text-title,
+.about-content-text-title,
+.dev-content-text-title,
+.projects-content-text-title,
+.contact-content-text-title {
+    font-size: max(3vw, 32px);
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sauce Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.home-content-text-subtitle,
+.about-content-text-subtitle,
+.dev-content-text-subtitle,
+.projects-content-text-subtitle,
+.contact-content-text-subtitle {
+    font-size: max(2vw, 22px);
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sauce Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.home-content-text-content,
+.about-content-text-content,
+.dev-content-text-content,
+.projects-content-text-content,
+.contact-content-text-content {
+    font-size: max(1vw, 12px);
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sauce Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.list {
+    /* in front of each element, add a bullet character */
+    list-style-type: disc;
+    /* add some space between the bullet and the text */
+    padding-left: 20px;
+    /* remove the default left margin */
+    margin-left: 0;
+    /* remove the default top margin */
+    margin-top: 0;
+}
+
+a {
+    color: #fff !important;
+    text-decoration: none;
+    font-family: "Open Sauce Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --hover-displace: 0px;
+    --hover-opacity: 0;
+}
+
+a:hover {
+    /* should glow on hover. use the glow class */
+    background: linear-gradient(to right, #ff0000, #ffff00, #ff0000);
+    -webkit-background-clip: text !important;
+    transition: all 0.25s ease-in-out;
+    color: transparent !important;
+    width: calc(100% - 20px);
+    animation: glowing 15s linear infinite;
+    background-size: 400%;
+    text-decoration: none;
+    --hover-displace: 2px;
+    --hover-opacity: 1;
+}
+
+.contact-button {
+    /* circular button, contains logo inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1e1e1e;
+    border: 1px solid #3d3f43;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    position: relative;
+}
+
+
+.contact-button:before {
+    content: '';
+    background: linear-gradient(to right, #ff0000, #ffff00, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50%;
+}
+
+
+.contact-button:hover:before {
+    opacity: 1;
+}
+
+.contact-button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+.contact-button:active:after {
+    background: transparent !important;
+}
+
+.contact-button-icon {
+    /* logo inside the button */
+    width: 30px;
+    height: 30px;
+    fill: white !important;
+}
+
+.contact-list {
+    /* list of contact buttons */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
